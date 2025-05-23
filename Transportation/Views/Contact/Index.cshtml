@@ -1,0 +1,479 @@
+﻿@model IEnumerable<Transportation.Models.Contact>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.LastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Company)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Entity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Client)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.License)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Class)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Endorsement)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AMReport)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PMReport)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeeID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AreaCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Prefix)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Line)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Extension)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PhoneLabel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gatekeeper)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GatekeeperNote)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PhoneNote)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PhoneSort)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AreaCode2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Prefix2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Line2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Extension2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Phone2Label)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gatekeeper2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gatekeeper2Note)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Phone2Note)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Phone2Sort)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AreaCode3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Prefix3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Line3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Extension3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Phone3Label)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gatekeeper3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gatekeeper3Note)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Phone3Note)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Phone3Sort)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmailLabel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmailSort)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email21Label)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email2Sort)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email2Label)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email3Sort)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Domain)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Domain1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Website)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WebsiteLabel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Website2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Website2Label)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Website3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Website3Label)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StreetNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StreetName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StreetDesignator)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Street2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TownCity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.State)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ZipCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.County)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Country)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Map)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Published)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Inactive)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Select)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Created)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Publc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Route)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Run)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ticket)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.User)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Company)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Entity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Client)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.License)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Class)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Endorsement)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AMReport)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PMReport)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeeID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AreaCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Prefix)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Line)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Extension)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhoneLabel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gatekeeper)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GatekeeperNote)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhoneNote)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhoneSort)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AreaCode2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Prefix2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Line2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Extension2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone2Label)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gatekeeper2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gatekeeper2Note)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone2Note)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone2Sort)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AreaCode3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Prefix3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Line3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Extension3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone3Label)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gatekeeper3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gatekeeper3Note)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone3Note)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone3Sort)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmailLabel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmailSort)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email21Label)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email2Sort)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email2Label)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email3Sort)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Domain)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Domain1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Website)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WebsiteLabel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Website2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Website2Label)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Website3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Website3Label)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StreetNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StreetName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StreetDesignator)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Street2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TownCity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.State)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ZipCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.County)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Country)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Map)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Published)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Inactive)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Select)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Created)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Publc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Route.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Run.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ticket.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.User.Id)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

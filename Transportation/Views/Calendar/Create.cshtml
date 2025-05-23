@@ -1,0 +1,118 @@
+﻿@model Transportation.Models.Calendar
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Calendar</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Date" class="control-label"></label>
+                <input asp-for="Date" class="form-control" />
+                <span asp-validation-for="Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DayOfWeek" class="control-label"></label>
+                <input asp-for="DayOfWeek" class="form-control" />
+                <span asp-validation-for="DayOfWeek" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Item" class="control-label"></label>
+                <input asp-for="Item" class="form-control" />
+                <span asp-validation-for="Item" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Event" class="control-label"></label>
+                <input asp-for="Event" class="form-control" />
+                <span asp-validation-for="Event" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Dismissal" class="control-label"></label>
+                <input asp-for="Dismissal" class="form-control" />
+                <span asp-validation-for="Dismissal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Return" class="control-label"></label>
+                <input asp-for="Return" class="form-control" />
+                <span asp-validation-for="Return" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ReturnDayOfWeek" class="control-label"></label>
+                <input asp-for="ReturnDayOfWeek" class="form-control" />
+                <span asp-validation-for="ReturnDayOfWeek" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Type" class="control-label"></label>
+                <input asp-for="Type" class="form-control" />
+                <span asp-validation-for="Type" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SubType" class="control-label"></label>
+                <input asp-for="SubType" class="form-control" />
+                <span asp-validation-for="SubType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Published" class="control-label"></label>
+                <input asp-for="Published" class="form-control" />
+                <span asp-validation-for="Published" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Inactive" class="control-label"></label>
+                <input asp-for="Inactive" class="form-control" />
+                <span asp-validation-for="Inactive" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Select" class="control-label"></label>
+                <input asp-for="Select" class="form-control" />
+                <span asp-validation-for="Select" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Created" class="control-label"></label>
+                <input asp-for="Created" class="form-control" />
+                <span asp-validation-for="Created" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Publc" class="control-label"></label>
+                <input asp-for="Publc" class="form-control" />
+                <span asp-validation-for="Publc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ContactId" class="control-label"></label>
+                <select asp-for="ContactId" class ="form-control" asp-items="ViewBag.ContactId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="RouteId" class="control-label"></label>
+                <select asp-for="RouteId" class ="form-control" asp-items="ViewBag.RouteId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="RunId" class="control-label"></label>
+                <select asp-for="RunId" class ="form-control" asp-items="ViewBag.RunId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="TicketId" class="control-label"></label>
+                <select asp-for="TicketId" class ="form-control" asp-items="ViewBag.TicketId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="UserId" class="control-label"></label>
+                <select asp-for="UserId" class ="form-control" asp-items="ViewBag.UserId"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
